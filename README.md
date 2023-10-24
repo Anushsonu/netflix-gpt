@@ -1,3 +1,32 @@
+<!-- Steps -->
+
+1: Header;
+2: Routing of app
+3: Login form
+4: Sign up form
+5: Form validation
+6: useRef hook
+7: firebase setup
+8: Deploying our app to prosuction
+9: Create signup user account
+10: implement signin user api
+11: created redux store with userSLice
+12: implemented signout
+13: update profile
+14: bug fix- update displayName, if user is not logged in, restrict browsr route and if signed in, restrict login route
+15: unsubscribed to onAuthStateChanged callback
+16: add hard coded values to constants file
+17: register tmdb api and create project and get access token
+18: get nowPlayingMovies data from tmdb
+19: custom hook for now playing movies
+20: create movie slice
+21: update store with movie data
+22: planning for main container and secondary container
+23: fetch data for trailer video
+24: update store
+25: embaded youtube video
+26: make it auto play
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
