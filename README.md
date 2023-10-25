@@ -26,6 +26,7 @@
 24: update store
 25: embaded youtube video
 26: make it auto play
+27: build secondary component
 
 # Getting Started with Create React App
 

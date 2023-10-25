@@ -3,17 +3,24 @@ import { useSelector } from "react-redux";
 import useMovieTrailer from "../hooks/useMovieTrailer";
 
 const VideoBackgorund = ({ movieId }) => {
-  const trailerVodeo = useSelector((store) => store.movies?.trailerVodeo);
   //   Fetch movie trailer and set it in store
   useMovieTrailer(movieId);
+  const trailerVodeo = useSelector((store) => store.movies?.trailerVideo);
+  console.log("Key :", trailerVodeo?.key);
   return (
-    <div className="">
+    <div>
       <iframe
-        className="w-screen min-h-[930px]"
+        className="w-[99.99%] h-screen"
+        // src={
+        //   "https://www.youtube.com/embed/Cm3Z1jEjHHc?si=" +
+        //   trailerVodeo?.key +
+        //   "&autoplay=1" +
+        //   "&mute=1"
+        // }
         src={
-          "https://www.youtube.com/embed/Cm3Z1jEjHHc?si=" +
+          "https://www.youtube.com/embed/" +
           trailerVodeo?.key +
-          "&autoplay=1" +
+          "?autoplay=1" +
           "&mute=1"
         }
         title="YouTube video player"
