@@ -8,9 +8,9 @@ const VideoBackgorund = ({ movieId }) => {
   const trailerVodeo = useSelector((store) => store.movies?.trailerVideo);
   console.log("Key :", trailerVodeo?.key);
   return (
-    <div>
+    <div className="w-full">
       <iframe
-        className="w-[99.99%] h-screen"
+        className="w-full h-screen"
         // src={
         //   "https://www.youtube.com/embed/Cm3Z1jEjHHc?si=" +
         //   trailerVodeo?.key +
