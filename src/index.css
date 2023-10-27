@@ -22,3 +22,22 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+@keyframes borderHighlight {
+    0% {
+        border-color: black;
+    }
+
+    50% {
+        border-color: white;
+    }
+
+    100% {
+        border-color: black;
+    }
+}
+
+.highlight-border {
+    animation: borderHighlight 1s linear infinite;
+    transition: border-color 0.3s ease;
+}

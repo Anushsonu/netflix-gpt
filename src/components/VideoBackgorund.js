@@ -6,7 +6,6 @@ const VideoBackgorund = ({ movieId }) => {
   //   Fetch movie trailer and set it in store
   useMovieTrailer(movieId);
   const trailerVodeo = useSelector((store) => store.movies?.trailerVideo);
-  console.log("Key :", trailerVodeo?.key);
   return (
     <div className="w-full">
       <iframe
