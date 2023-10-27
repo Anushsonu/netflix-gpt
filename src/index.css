@@ -8,14 +8,13 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #888;
-    border-radius: 5px;
+    background: transparent;
+    /* border-radius: 5px; */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #272727;
-    border-radius: 5px;
+    background-color: transparent;
 }
 
 /* Handle on hover */
@@ -40,4 +39,31 @@
 .highlight-border {
     animation: borderHighlight 1s linear infinite;
     transition: border-color 0.3s ease;
+}
+
+.image-container {
+    width: 200px;
+    margin: 0 10px;
+    /* Set the width of the container */
+    overflow: hidden;
+    /* Hide the overflow to keep the size the same */
+    position: relative;
+    /* Establish a positioning context for absolute children */
+}
+
+.zoom-image {
+    width: 100%;
+    /* Make the image fill the container */
+    height: auto;
+    /* Maintain the image's aspect ratio */
+    transition: transform 0.3s ease;
+    /* Add a smooth transition effect */
+    object-fit: cover;
+    /* Initial zoom scale */
+    transform: scale(1);
+}
+
+.image-container:hover .zoom-image {
+    transform: scale(1.2);
+    /* Apply a zoom effect on hover */
 }

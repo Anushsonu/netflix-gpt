@@ -14,7 +14,7 @@ const GptMovieSuggestions = ({ searching, setIsSearching }) => {
   }
   if (!movieNames) {
     return (
-      <div className="bg-gray-700 p-5 rounded-md mx-10 mt-10 text-white">
+      <div className="bg-gray-700 p-5 rounded-md mx-10 mt-10 text-white text-3xl">
         Search for movies ...
       </div>
     );

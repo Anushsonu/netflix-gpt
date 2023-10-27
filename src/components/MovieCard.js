@@ -5,8 +5,8 @@ const MovieCard = ({ posterPath }) => {
     return null;
   }
   return (
-    <div className="w-[200px] pr-5">
-      <img src={IMG_CDN_URL + posterPath} alt="movie_card" />
+    <div class="image-container">
+      <img src={IMG_CDN_URL + posterPath} alt="movie_card" class="zoom-image" />
     </div>
   );
 };

@@ -118,7 +118,7 @@ const Login = () => {
           ref={password}
           type="password"
           placeholder="password"
-          className="p-2 my-2 rounded-md bg-gray-800"
+          className="p-2 my-2 rounded-md bg-gray-800 text-white"
         />
         <p className="text-red-600 text-lg">{errorMessage}</p>
         <button

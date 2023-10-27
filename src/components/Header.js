@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,7 @@ import { LOGO_URL, USER_LOGO } from "../utils/constants";
 import { toggleGptSearchView } from "../utils/gptSlice";
 
 const Header = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
@@ -44,7 +45,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="absolute w-full bg-gradient-to-b from-black z-50 px-10 py-10 flex flex-col md:flex-row justify-between">
+    <div className="absolute w-full bg-gradient-to-b from-black z-50 px-10 py-10 flex flex-col md:flex-row justify-between pr-48">
       <img className="w-44" src={LOGO_URL} alt="logo" />
       {user && (
         <div className="flex justify-center items-center">
@@ -54,13 +55,30 @@ const Header = () => {
           >
             {gptToggle ? "Homepage" : "GPT Search"}
           </button>
-          <img className="w-12 h-12 mr-5" src={USER_LOGO} alt="user" />
-          <button
-            className="border border-none bg-red-600 rounded-lg px-5 py-3 font-bold text-white"
-            onClick={handleSignOut}
+          <div
+            className="flex relative"
+            onMouseEnter={() => {
+              setShowDropdown(true);
+            }}
+            onMouseLeave={() => {
+              setShowDropdown(false);
+            }}
           >
-            Sign out {user.displayName}
-          </button>
+            <img className="w-12 h-12 mr-5" src={USER_LOGO} alt="user" />
+            {showDropdown && (
+              <div className="flex flex-col bg-slate-700 rounded-md cursor-pointer absolute top-12 w-48 font-bold text-white">
+                <span className="px-5 py-3 rounded-md hover:bg-slate-800">
+                  Signed in as {user.displayName}
+                </span>
+                <span
+                  className="text-red-500 px-5 py-3 rounded-md hover:bg-slate-800"
+                  onClick={handleSignOut}
+                >
+                  Sign out
+                </span>
+              </div>
+            )}
+          </div>
         </div>
       )}
     </div>
