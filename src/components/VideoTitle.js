@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="pt-[20%] px-12 h-screen absolute text-white bg-gradient-to-r from-black">
-      <h1 className="text-6xl">{title}</h1>
-      <p className="w-1/2 pt-12 text-lg">{overview}</p>
+    <div className="pt-[45%] md:pt-[20%] px-5 md:px-12 h-screen absolute text-white bg-gradient-to-r from-black">
+      <h1 className="text-4xl md:text-6xl">{title}</h1>
+      <p className="w-1/2 pt-12 text-sm md:text-lg">{overview}</p>
       <div>
         <button className="text-black text-xl px-4 py-2 bg-white hover:bg-gray-300 rounded-lg border border-black">
           <FontAwesomeIcon icon="play" /> Play

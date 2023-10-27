@@ -92,7 +92,7 @@ const Login = () => {
         />
       </div>
       <form
-        className="w-3/12 flex flex-col absolute right-0 left-0 p-12 bg-black bg-opacity-90 my-36 mx-auto"
+        className="w-4/5 md:w-3/12 flex flex-col absolute right-0 left-0 p-12 bg-black bg-opacity-90 my-36 mx-auto"
         onSubmit={(e) => e.preventDefault()}
       >
         <h2 className="text-white font-bold text-3xl mb-5">

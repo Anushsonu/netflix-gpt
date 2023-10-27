@@ -45,7 +45,7 @@ const GptSearchBar = ({ searching, setIsSearching }) => {
       <form onSubmit={(e) => e.preventDefault()}>
         <input
           ref={searchText}
-          className="mr-5 w-[400px] p-3 rounded-md"
+          className="mr-5 w-[200px] md:w-[400px] p-3 rounded-md"
           type="text"
           placeholder="What would you like to watch today ?"
         />

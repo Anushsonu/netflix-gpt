@@ -46,11 +46,11 @@ const Header = () => {
 
   return (
     <div className="absolute w-full bg-gradient-to-b from-black z-50 px-10 py-10 flex flex-col md:flex-row justify-between pr-48">
-      <img className="w-44" src={LOGO_URL} alt="logo" />
+      <img className="w-28 md:w-44" src={LOGO_URL} alt="logo" />
       {user && (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mt-3 md:mt-0">
           <button
-            className="bg-green-600 hover:bg-green-500 px-5 py-3 rounded-lg mr-5 font-semibold text-lg transition-transform duration-300 ease-in-out hover:scale-110"
+            className="bg-green-600 hover:bg-green-500 px-5 py-3 rounded-lg mr-5 font-semibold text-sm md:text-lg transition-transform duration-300 ease-in-out hover:scale-110"
             onClick={handleGptSearchClick}
           >
             {gptToggle ? "Homepage" : "GPT Search"}
@@ -64,7 +64,7 @@ const Header = () => {
               setShowDropdown(false);
             }}
           >
-            <img className="w-12 h-12 mr-5" src={USER_LOGO} alt="user" />
+            <img className="w-12 h-12 md:mr-5" src={USER_LOGO} alt="user" />
             {showDropdown && (
               <div className="flex flex-col bg-slate-700 rounded-md cursor-pointer absolute top-12 w-48 font-bold text-white">
                 <span className="px-5 py-3 rounded-md hover:bg-slate-800">
